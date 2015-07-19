@@ -22,7 +22,6 @@ var QUICKMAN = (function(){
 	};
 
 	/* opens QuickMan's window */
-	//function openQuickMan(needle){
 	var openQuickMan = function (needle){
 		// ensure QuickMan's window is not already open
 		if ($("#quickman_window").length == 0){
@@ -56,7 +55,7 @@ var QUICKMAN = (function(){
 	chrome.runtime.onMessage.addListener(function(request){
 		if (request.open){openQuickMan();}
 	});
-	
+
 	return {
 		"$quickManWindow": $quickManWindow,
 
