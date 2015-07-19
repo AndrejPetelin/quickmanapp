@@ -12,8 +12,10 @@ Installation:
  6. click on the "load unpacked extension" button (near the top-left)
  7. choose the extension's directory
  
-* the extension will be soon available on the Chrome web store!
+the extension will be soon available on the Chrome web store!
  
+(the extension will be soon available on the Chrome web store!)
+
 Usage:
  QuickMan lets you to easily access man pages (e.g., for C standard library 
  functions). you could either hold down the CTRL key and highlight text in a
@@ -27,12 +29,14 @@ Usage:
  to close QuickMan's window just hit ESC on your keyboard or click on the
  x-button near the top-right.
  
-* QuickMan will support more man pages soon!
+(QuickMan will support more man pages soon!)
  
  Report a Bug:
+ 
   https://github.com/kmesbah/quickmanapp/issues/new
  
  Contact:
+ 
   quickmanapp@gmail.com
   
 copyright 2015 Kareem Mesbah. all rights reserved.
