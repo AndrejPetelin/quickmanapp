@@ -1,0 +1,68 @@
+{
+	"manifest_version": 2,
+	"name": "QuickMan",
+	"version": "0.8",
+
+	"description": "easily access Linux man pages",
+
+	"author": "Kareem Mesbah",
+
+	"icons": {
+		"16":"images/logos/logo16.png",
+		"48": "images/logos/logo48.png",
+  		"128": "images/logos/logo128.png"
+	},
+
+	"browser_action": {
+    	"default_title": "QuickMan",
+    	"default_icon": {
+			"19": "images/logos/logo19.png",
+    		"38": "images/logos/logo38.png"
+		},
+		"default_popup": "html/popup.html"
+	},
+
+	"background": {
+		"scripts": [
+			"js/jquery-2.1.4.min.js",
+			"js/background/data.js",
+			"js/background/background.js"
+		]
+	},
+
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"windows": "Ctrl+Y",
+				"mac": "Command+Y",
+				"chromeos": "Ctrl+Y",
+				"linux": "Ctrl+Y"
+			}
+		}
+	},
+
+	"content_scripts": [
+		{
+            "matches": ["<all_urls>"],
+            "js": [
+				"js/jquery-2.1.4.min.js",
+				"js/content/main.js",
+				"js/content/host.js",
+				"js/content/container.js",
+				"js/content/content.js",
+				"js/content/header.js",
+				"js/content/results.js",
+				"js/content/search.js"
+			],
+            "run_at": "document_end"
+		}
+	],
+
+	"permissions": ["http://man7.org/linux/man-pages/*", "tabs"],
+
+	"offline_enabled": false,
+
+	"minimum_chrome_version": "31",
+
+	"web_accessible_resources": ["html/*", "css/*","images/*", "js/*"]
+ }
